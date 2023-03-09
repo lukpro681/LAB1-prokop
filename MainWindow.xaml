@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtpromien" HorizontalAlignment="Left" Height="23" Margin="104,12,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="188" Background="#FFFBFBB3"/>
+        <Label x:Name="labelinfo1" Content="Promień" HorizontalAlignment="Left" Margin="33,11,0,0" VerticalAlignment="Top" Width="66" Height="26"/>
+        <TextBox x:Name="txtwysokosc" HorizontalAlignment="Left" Margin="104,42,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="188" Background="#FFFBFBB3" Height="18"/>
+        <Label x:Name="label_info2" Content="Wysokość" HorizontalAlignment="Left" Margin="33,38,0,0" VerticalAlignment="Top" Width="66" Height="26"/>
+        <Button x:Name="bt_oblicz" Content="Oblicz" HorizontalAlignment="Left" Margin="198,75,0,0" VerticalAlignment="Top" Height="24" Width="94" Click="bt_oblicz_Click"/>
+        <Label x:Name="lbl_objetosc" Content="0" HorizontalAlignment="Left" Margin="104,128,0,0" VerticalAlignment="Top" Height="34" Width="188" Background="#FFFFA0A0">
+            <Label.BindingGroup>
+                <BindingGroup/>
+            </Label.BindingGroup>
+        </Label>
+        <ComboBox x:Name="cmbRodzajbryly" Margin="355,13,257,0" VerticalAlignment="Top" SelectedIndex="0" SelectionChanged="cmbRodzajbryly_SelectionChanged" Height="22">
+            <Button Content="Walec"/>
+            <Button Content="Stożek"/>
+            <Button Content="Kula"/>
+        </ComboBox>
+        <Canvas x:Name="cv_rysunek" Margin="331,67,169,67" MaxHeight="300" MaxWidth="300" MinHeight="300" MinWidth="300" Background="#FFBDF4FF"/>
+        <Button x:Name="bt_rysuj1" Content="Rysuj 1" HorizontalAlignment="Left" Margin="243,347,0,0" VerticalAlignment="Top" Width="83" Click="Button_Click"/>
+        <Button x:Name="bt_clear" Content="Czyść" HorizontalAlignment="Left" Margin="243,322,0,0" VerticalAlignment="Top" Width="83" Click="bt_clear_Click"/>
+        <Button x:Name="bt_elipsa" Content="Elipsa" HorizontalAlignment="Left" Margin="158,347,0,0" VerticalAlignment="Top" Width="80" Click="bt_elipsa_Click"/>
+        <Button x:Name="bt_kolo" Content="Koło" HorizontalAlignment="Left" Margin="158,322,0,0" VerticalAlignment="Top" Width="80" Click="bt_kolo_Click"/>
+        <Button x:Name="bt_tree" Content="Rysuj Drzewa" HorizontalAlignment="Left" Margin="66,322,0,0" VerticalAlignment="Top" Width="87" Click="bt_tree_Click"/>
+
+    </Grid>
+</Window>
